@@ -26,10 +26,10 @@ def insertSort(lis):
         key = lis[j]  #the item to sort is the jth item, remember it.
         i = j-1  #initialize counter to one before the item being sorted. 
         while i > -1 and lis[i]>key: #while counter isn't negative, and the item found there is bigger than the key
-           lis[i+1] = lis[i]  #set the 
-           i -= 1
-        lis[i+1] = key
-    return lis
+           lis[i+1] = lis[i]  #copy the value of that cell one to the right. 
+           i -= 1 #look at the next cell up
+        lis[i+1] = key  #after we hit either a larger value, or the first element in list, insert the key as the next cell's value. 
+    return lis #return the sorted list. 
         
      
         
